@@ -49,7 +49,7 @@ class UsuarioController extends Controller
                 return view('welcome');
             }    
         }
-        return response()->json(['messeage' => 'No se encuentra el producto '],200); 
+        return response()->json(['messeage' => 'No se encuentra el Codigo de Verificacion '],400); 
     }
 
 
@@ -67,10 +67,10 @@ class UsuarioController extends Controller
         {
             if($hi == $results[0]->Password)
             {
-                return response()->json(['messeage' => 'Si se encuentra'],400); 
+                return response()->json(['messeage' => 'Si se encuentra'],200); 
             }    
         }
-        return response()->json(['messeage' => 'No se encuentra el producto '],200); 
+        return response()->json(['messeage' => 'No se encuentra el Codigo de Verificacion '],400); 
        
     }
 
