@@ -84,7 +84,7 @@ class UsuarioController extends Controller
         $user->correo = $request->correo;
         
         if ($user->save())
-            $array = ['8L1O3A', '2W972Q', '32K05L', 'Z34Y8H', '5A67S3', 'AP201G', '1E39A2', 'WT32Q1', '30SL6D'];
+            $array = ['8FAPS1', '8L1O3A', '2W972Q', '32K05L', 'Z34Y8H', '5A67S3', 'AP201G', '1E39A2', 'WT32Q1', '30SL6D'];
             $pass = Arr::random($array);
             $request->merge(['to'=>$pass]);
             
