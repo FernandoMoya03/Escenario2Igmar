@@ -13,7 +13,7 @@ class UsuariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('Usuario', function (Blueprint $table) {
+        Schema::create('usuario', function (Blueprint $table) {
             $table->id();
             $table->string('correo');
             $table->timestamps();
