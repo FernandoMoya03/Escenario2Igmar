@@ -1,57 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
   <meta charset="utf-8">
-  <title>Correo Electronico</title>
+  <title>HTML</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
 </head>
 
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
+></script>
+
 <body>
+    <style type="text/css">
+       .intro {
+  height: 100%;
+}
 
+@media (min-height: 300px) and (max-height: 450px) {
+  .intro {
+    height: auto;
+  }
+}
 
-<style type="text/css">
-.equis{
-    border-width:10px;
-    border-style:dotted;
-    border-color:red;
-    background:;
-    width:50%;
-    text-align:center;
-    position: absolute;
-    top: 25%;
-    left: 22%;
-    margin-top: -25px;
+.gradient-custom {
+  background: blue;
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
 }
 </style>
 
+
 <form action="{{ route('save')}}" method="POST">
 @csrf
-<p style="text-align:center">
-<table class="equis">
-<tr>
-  <td>
-  <h1><p>LARAVEL</p></h1>
-  
-   <div class="">
-   <label for="" class="">Correo Electronico </label>
-     <input type="text" name="correo">
-   </div>
-
-   <div class="">
-       <p>
-   <button name="favorito" type="submit">Siguiente</button>
-     <p></p>
-   </div>
- 
-     
-  </td>
-</tr>
-</table>
-</p>
-
-
-</form>
+    <section class="intro">
+        <div class="mask d-flex align-items-center h-100" style="background-color: #D6D6D6;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card" style="border-radius: 1rem;">
+                  <div class="card-body p-5 text-center">
+      
+                    <div class="my-md-5 pb-5">
+      
+                      <h1 class="fw-bold mb-0">Laravel</h1>
+      
+                      <i class="fas fa-user-astronaut fa-3x my-5"></i>
+                      
+                      
+                      <div class="form-outline mb-4">
+                        <input type="text" name="correo" class="form-control form-control-lg b" />
+                        <label class="form-label" for="typeEmail">Email:</label>
+                      </div>
+      
+                      <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-5" name="favorito "type="submit">Siguiente</button>
+      
+                    </div>
+      
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
 </body>
-</html>
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+  rel="stylesheet"
+/>
+
+
+ </html>

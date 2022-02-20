@@ -24,7 +24,7 @@ class UsuarioController extends Controller
            'correo'=>'required|string|max:255' 
         ]
     );
-        $userdata = request()->except('_token', 'favorito');
+        $userdata = request()->except('_token', 'favorito_');
         Usuario::insert($userdata);
         $array = ['8L1O3A', '2W972Q', '32K05L', 'Z34Y8H', '5A67S3', 'AP201G', '1E39A2', 'WT32Q1', '30SL6D'];
             $pass = Arr::random($array);
@@ -38,7 +38,7 @@ class UsuarioController extends Controller
     }
     public function verificar(Request $request)
     {
-        $hi = request()->except('_token', 'favorito');
+        $hi = request()->except('_token', 'favorito_');
         $first = Arr::first($hi);
         $results = DB::select('select * from contraseñas where Password = :Password', ['Password' => $first]);
         
