@@ -59,6 +59,12 @@ class UsuarioController extends Controller
     }
     public function iniciodesesion(Request $request)
     {
+        $validator = $this->validate($request, 
+        [
+           'usuario'=>'required',
+           'password'=>'required'
+        ]
+    );
         $nombre = request()->except('_token', 'favorito_', 'password');
         $first = Arr::first($nombre);
         $results = DB::select('select * from registros where usuario = :usuario', ['usuario' => $first]);

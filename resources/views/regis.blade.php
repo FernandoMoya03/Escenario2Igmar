@@ -46,7 +46,7 @@
                       <h1 class="fw-bold mb-0">Registro de Datos</h1>
       
                       <i class="fas fa-user-astronaut fa-3x my-5"></i>
-                      <p></p>
+                    
 
                       
                       <form action="{{ route('guardarusuario')}}" method="POST">
@@ -62,6 +62,7 @@
       
                       <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-5" name="favorito "type="submit">Siguiente</button>
                       </form>
+                      
                     </div>
       
                     

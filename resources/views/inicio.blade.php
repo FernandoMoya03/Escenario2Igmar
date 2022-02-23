@@ -46,7 +46,8 @@
                       <h1 class="fw-bold mb-0">Laravel</h1>
       
                       <i class="fas fa-user-astronaut fa-3x my-5"></i>
-                      
+                      <p></p>
+                    
                       <form action="{{ route('save')}}" method="POST">
                       @csrf
                       <div class="form-outline mb-4">
