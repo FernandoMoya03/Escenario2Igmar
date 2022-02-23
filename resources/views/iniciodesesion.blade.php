@@ -47,18 +47,30 @@
       
                       <i class="fas fa-user-astronaut fa-3x my-5"></i>
                       
-                      <form action="{{ route('save')}}" method="POST">
+                      <form action="{{ route('iniciodesesion')}}" method="POST">
                       @csrf
                       <div class="form-outline mb-4">
-                        <input type="text" name="correo" class="form-control form-control-lg b" />
-                        <label class="form-label" for="typeEmail">Email:</label>
+                        <input type="text" name="usuario" class="form-control form-control-lg b" />
+                        <label class="form-label" for="typeEmail">Usuario:</label>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <input type="text" name="password" class="form-control form-control-lg b" />
+                        <label class="form-label" for="typeEmail">Contraseña:</label>
                       </div>
                       <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-5" name="favorito "type="submit">Siguiente</button>
                       <p></P>
                       </form>
-           
+                      
+                      <form action="{{ route('regis')}}" method="GET">
+                      @csrf
+                      <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-5" name="regist" type="">Registrarte</button>
+                      </form>
+                      
+                      
     
-                    </div>                 
+                    </div>
+      
+                    
                   </div>
                 </div>
               </div>

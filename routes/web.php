@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('inicio');
+    return view('iniciodesesion');
 });
 
 
 //Route::get("/inicio", "UsuarioController@userform");
 Route::post("/save", "UsuarioController@save")->name('save');
 Route::post("/verificar", "UsuarioController@verificar")->name('verificar');
+Route::post("/guardarusuario", "UsuarioController@guardarusuario")->name('guardarusuario');
+Route::get("/regis", "UsuarioController@registrouser")->name('regis');
+Route::post("/iniciodesesion", "UsuarioController@iniciodesesion")->name('iniciodesesion');

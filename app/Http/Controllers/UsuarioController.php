@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Usuario;
+use App\Registros;
 use Illuminate\Support\Arr;
 use App\Password;
 use Illuminate\Support\Facades\Mail;
@@ -50,6 +51,44 @@ class UsuarioController extends Controller
             }    
         }
         return response()->json(['messeage' => 'No se encuentra el Codigo de Verificacion '],400); 
+    }
+
+    public function registrouser()
+    {
+        return view('regis');
+    }
+    public function iniciodesesion(Request $request)
+    {
+        $nombre = request()->except('_token', 'favorito_', 'password');
+        $first = Arr::first($nombre);
+        $results = DB::select('select * from registros where usuario = :usuario', ['usuario' => $first]);
+        if($results)
+        {
+            if($first == $results[0]->usuario)
+            {
+                $contra = request()->except('_token', 'favorito_', 'usuario');
+                $first = Arr::first($contra);
+                $results = DB::select('select * from registros where password = :password', ['password' => $first]);
+                    if($results)
+                    {
+                        if($first == $results[0]->password)
+                            {
+                                return view('inicio');
+                            }    
+                    }
+                return response()->json(['messeage' => 'No se encuentra la contrasena ']); 
+            }    
+        }
+        return response()->json(['messeage' => 'No se encuentra el Usuario ']); 
+        
+        
+    }
+    
+    public function guardarusuario (Request $request)
+    {
+        $pedir = request()->except('_token', 'favorito_');
+        Registros::insert($pedir);
+        return view('iniciodesesion');
     }
 
 

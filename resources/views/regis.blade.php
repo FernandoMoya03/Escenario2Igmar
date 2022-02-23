@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Login</title>
-  <link rel="icon" href="{{ asset('images/equis.png') }}">
+  <title>Registro</title>
+  <link rel="icon" href="{{ asset('images/verificacion.jpg') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
 </head>
@@ -15,7 +15,7 @@
 
 <body>
     <style type="text/css">
-      .intro {
+       .intro {
   height: 100%;
 }
 
@@ -43,22 +43,28 @@
       
                     <div class="my-md-5 pb-5">
       
-                      <h1 class="fw-bold mb-0">Laravel</h1>
+                      <h1 class="fw-bold mb-0">Registro de Datos</h1>
       
                       <i class="fas fa-user-astronaut fa-3x my-5"></i>
+                      <p></p>
+
                       
-                      <form action="{{ route('save')}}" method="POST">
+                      <form action="{{ route('guardarusuario')}}" method="POST">
                       @csrf
                       <div class="form-outline mb-4">
-                        <input type="text" name="correo" class="form-control form-control-lg b" />
-                        <label class="form-label" for="typeEmail">Email:</label>
+                        <input type="text" name="usuario" class="form-control form-control-lg b" />
+                        <label class="form-label" for="typeEmail">Inserta tu usuario</label>
                       </div>
+                      <div class="form-outline mb-4">
+                        <input type="text" name="password" class="form-control form-control-lg b" />
+                        <label class="form-label" for="typeEmail">Inserta tu contraseña</label>
+                      </div>
+      
                       <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-5" name="favorito "type="submit">Siguiente</button>
-                      <p></P>
                       </form>
-           
-    
-                    </div>                 
+                    </div>
+      
+                    
                   </div>
                 </div>
               </div>
@@ -66,9 +72,7 @@
           </div>
         </div>
       </section>
-    
-    
-    
+    </form>
 </body>
 
 <link
