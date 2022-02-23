@@ -51,7 +51,7 @@
                       @csrf
                       <div class="form-outline mb-4">
                         <input type="text" name="usuario" class="form-control form-control-lg b" />
-                        <label class="form-label" for="typeEmail">Usuario:</label>
+                        <label class="form-label" for="typeEmail">Nombre de usuario:</label>
                       </div>
                       <div class="form-outline mb-4">
                         <input type="text" name="password" class="form-control form-control-lg b" />
