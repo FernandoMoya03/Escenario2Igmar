@@ -47,7 +47,8 @@
                         Se te ha enviado un Codigo para confirmar que eres el propietario de la cuenta.
                       </label></p>
                       <h2>Codigo de Verificacion: </h2>
-                      <h2>{{$pass}}</h2>
+                      <!--<h2>{{$pass}}</h2> -->
+                      <a href="http://localhost:8000/api/codigo?codigo={{$pass}}">Tu codigo de acceso esta aqui.....</a>
                       
                       
       

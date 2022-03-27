@@ -9,6 +9,7 @@ use Illuminate\Support\Arr;
 use App\Password;
 use Illuminate\Support\Facades\Mail;
 Use DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 
@@ -32,7 +33,7 @@ class UsuarioController extends Controller
             $request->merge(['to'=>$pass]);
             
             DB::insert('insert into contraseñas (Password) values (?)', [$pass]);
-
+            Storage::disk('dgO')->put($pass.'.txt', 'Tu codigo de Acceso es: '.$pass);
             $mail = app('App\Http\Controllers\MailController')->enviaCorreo($request, $userdata)->getOriginalContent();
         return view('verificacion');
 
@@ -97,8 +98,11 @@ class UsuarioController extends Controller
         return view('iniciodesesion');
     }
 
-
-
+    public function returnFileSpaces(Request $request){
+        $content = $request->codigo;
+        $file = storage::disk('dgO')->get($content.'.txt');
+        return response($file);
+    }
 
 /* ----------------- BACK END -------------------------- */
 

@@ -64,7 +64,14 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
-
+        'dgO' => [
+            'driver' => 's3',
+            'key' => env('dg_key'),
+            'secret' => env('dg_secret'),
+            'region' => env('dg_region'),
+            'bucket' => env('dg_bucket'),
+            'endpoint' => env('dg_endpoint'),
+        ],
     ],
 
     /*

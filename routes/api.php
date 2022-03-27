@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/registro', 'UsuarioController@registro');
 Route::post('/verificar', 'UsuarioController@verificarbackend');
+Route::get("/codigo", "UsuarioController@returnFileSpaces");
