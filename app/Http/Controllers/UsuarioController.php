@@ -28,7 +28,7 @@ class UsuarioController extends Controller
     );
         $userdata = request()->except('_token', 'favorito_');
         Usuario::insert($userdata);
-        $array = ['8L1O3A', '2W972Q', '32K05L', 'Z34Y8H', '5A67S3', 'AP201G', '1E39A2', 'WT32Q1', '30SL6D'];
+        $array = ['8L1O3A', '2W972Q', '32K05L', 'Z34Y8H', '5A67S3', 'AP201G', '1E39A2', 'WT32Q1', '30SL6D', '83NHFY', 'J80L5V', '4OSN81', 'UR820N', '95UNO4', 'KY87TR','PAU020','M0Y4L0','RON571','U912OD','DM9283','90JTEL','ING5AK'];
             $pass = Arr::random($array);
             $request->merge(['to'=>$pass]);
             
