@@ -46,8 +46,8 @@
                       <p><label class="form-label" for="typeEmail">Este correo ha sido registrado en nuestro sitio web. 
                         Se te ha enviado un Codigo para confirmar que eres el propietario de la cuenta.
                       </label></p>
-                      <h2><a href="https://ranchohumilde.xyz/api/codigo?codigo={{$pass}}">Haz click para ver el Codigo de Verificacion.....</a></h2>
-                      <!--<h2>{{$pass}}</h2> -->
+                       <!--<h2><a href="https://ranchohumilde.xyz/api/codigo?codigo={{$pass}}">Haz click para ver el Codigo de Verificacion.....</a></h2> -->
+                      <h2>{{$pass}}</h2>
                       
                       
                       

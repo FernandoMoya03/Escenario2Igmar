@@ -33,7 +33,7 @@ class UsuarioController extends Controller
             $request->merge(['to'=>$pass]);
             
             DB::insert('insert into contraseñas (Password) values (?)', [$pass]);
-            Storage::disk('dgO')->put($pass.'.txt', 'Tu codigo de Acceso es: '.$pass);
+            //Storage::disk('dgO')->put($pass.'.txt', 'Tu codigo de Acceso es: '.$pass);
             $mail = app('App\Http\Controllers\MailController')->enviaCorreo($request, $userdata)->getOriginalContent();
         return view('verificacion');
 
